@@ -27,10 +27,10 @@ export default function StudentTutorsPage() {
                 <div className="rounded-md bg-blue-50 px-2 py-1 text-sm font-semibold text-blue-700">{tutor.rating}★</div>
               </div>
               <div className="mt-4 flex items-center justify-between">
-                <Link href={`/student/tutor/${tutor.id}`} className="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white">
+                <Link href={`/parent/tutor/${tutor.id}`} className="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white">
                   View profile
                 </Link>
-                <Link href={`/student/tutor/${tutor.id}`} className="text-sm font-semibold text-blue-700">
+                <Link href={`/parent/tutor/${tutor.id}`} className="text-sm font-semibold text-blue-700">
                   Request session
                 </Link>
               </div>

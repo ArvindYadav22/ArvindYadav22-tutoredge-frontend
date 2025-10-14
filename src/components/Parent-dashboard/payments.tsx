@@ -11,7 +11,7 @@ export default function StudentPaymentsPage() {
     <StudentDashboardLayout>
       <div className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-bold">Payments</h1>
-        <Link href="/student/payment-methods" className="text-sm font-semibold text-blue-700">Payment Methods</Link>
+        <Link href="/parent/payment-methods" className="text-sm font-semibold text-blue-700">Payment Methods</Link>
       </div>
       <div className="overflow-hidden rounded-xl border bg-white">
         <div className="grid grid-cols-4 border-b bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-700">

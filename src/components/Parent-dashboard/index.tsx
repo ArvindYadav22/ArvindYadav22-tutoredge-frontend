@@ -24,7 +24,7 @@ export default function PaymentMethodsPage() {
         <h1 className="text-2xl font-bold">Payment Methods</h1>
         <div className="flex gap-2">
           <Link
-            href="/student/payment-methods/add-card"
+            href="/parent/payment-methods/add-card"
             className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white"
           >
             Add Card

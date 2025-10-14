@@ -14,7 +14,7 @@ export default function TutorDetailPage() {
           <h1 className="text-2xl font-bold">Tutor Profile</h1>
           <p className="text-gray-600">Tutor ID: {id}</p>
         </div>
-        <Link href="/student/tutors" className="text-sm font-semibold text-blue-700">Back to tutors</Link>
+        <Link href="/parent/tutors" className="text-sm font-semibold text-blue-700">Back to tutors</Link>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -47,7 +47,7 @@ export default function TutorDetailPage() {
           <h2 className="mb-2 text-lg font-semibold">Request Session</h2>
           <div className="text-sm text-gray-600">Select a date and time.</div>
           <div className="mt-3 rounded-md border p-3 text-sm text-gray-500">Calendar placeholder</div>
-          <Link href="/student/booking-success" className="mt-4 inline-block rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white">Request Demo</Link>
+          <Link href="/parent/booking-success" className="mt-4 inline-block rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white">Request Demo</Link>
         </div>
       </div>
     </StudentDashboardLayout>
