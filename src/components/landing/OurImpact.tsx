@@ -4,14 +4,14 @@ import React from 'react';
 
 // --- Data for the component ---
 const statsData = [
-  { value: '2.1+', unit: 'crore', description: 'hours of LIVE learning' },
-  { value: '10+', unit: 'lakh', description: 'monthly youtube views' },
-  { value: '25+', unit: 'lakh', description: 'doubts resolved on the app' },
-  {
-    value: '57+',
-    unit: 'countries',
-    description: 'where students take LIVE classes',
-  },
+  { value: '2800+', unit: 'tutors', description: 'in Allahabad' },
+  { value: '1000+', unit: 'tutors', description: 'in Lucknow' },
+  { value: '11500+', unit: 'tutors', description: 'across other regions' },
+  { value: '4000+', unit: 'students', description: 'taught in the last 2 years' },
+  { value: '2800+', unit: 'students', description: 'scored 99% & above (1 year)' },
+  { value: '2300+', unit: 'students', description: 'scored 98% & above (1 year)' },
+  { value: '500+', unit: 'students', description: 'scored 95% & above (1 year)' },
+  { value: '1500+', unit: 'students', description: 'scored 90% & above (1 year)' }
 ];
 
 const featuresData = [
