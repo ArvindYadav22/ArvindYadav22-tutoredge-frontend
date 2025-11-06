@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import CourseHighlights from '@/components/landing/CourseHighlights';
 import CoursesForKids from '@/components/landing/CoursesForKids';
 import FeaturedTutors from '@/components/landing/FeaturedTutors';
@@ -7,42 +9,32 @@ import HowItWorks from '@/components/landing/HowItWorks';
 import OurImpact from '@/components/landing/OurImpact';
 import OurOfferings from '@/components/landing/OurOfferings';
 import TutorCTA from '@/components/landing/TutorCTA';
-import NavBar from '@/components/navbar/NavBar';
 
-// This data will eventually come from a CMS or your backend API
-const heroData = {
-  title: 'Join Live Online or Offline Classes with the Best Tutors',
-  subtitle:
-    'Trusted by 1000+ parents. Safe, verified tutors. Easy demo booking.',
-  ctaText: 'Book a Free Demo',
-  imageUrl: '/images/heroImage.png',
-};
-
-const LandingPage = () => {
+export default function HomePage() {
   return (
-    // Using a React Fragment <>...</> to group elements
     <>
-      <NavBar />
+      <Head>
+        <title>TutorEdge – Find the Right Tutor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <main>
         <HeroSection
-          title={heroData.title}
-          subtitle={heroData.subtitle}
-          ctaText={heroData.ctaText}
-          imageUrl={heroData.imageUrl}
+          title="Find expert tutors for any subject"
+          subtitle="Personalized 1-on-1 online sessions with verified tutors. Learn at your pace, on your schedule."
+          ctaText="Find a Tutor"
+          imageUrl="/images/heroImage.png"
         />
-        <CourseHighlights />
         <OurOfferings />
-        <CoursesForKids />
-        <FeaturedTutors />
+        <CourseHighlights />
         <HowItWorks />
-        <TutorCTA />
+        <FeaturedTutors />
         <OurImpact />
+        <CoursesForKids />
+        <TutorCTA />
         <Footer />
-        {/* The Trust Badges section would go here. It should be its own component! */}
       </main>
-      {/* <Footer /> component would go here */}
     </>
   );
-};
+}
 
-export default LandingPage;
+
