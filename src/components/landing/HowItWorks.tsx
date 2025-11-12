@@ -1,72 +1,59 @@
-import { CalendarCheck, CreditCard, MonitorPlay } from 'lucide-react';
-import React from 'react';
-
-import Button from '../ui/Button';
+import React from "react";
+import { Users, CheckSquare, FileText, BarChart } from "lucide-react";
 
 const stepsData = [
   {
     id: 1,
-    icon: CalendarCheck,
-    title: 'Book a Demo',
-    description: 'Book a Free Demo Class with a Tutor.',
+    icon: Users,
+    title: "1 to 3 Tutors give a demo session to your child",
+    color: "bg-yellow-100",
   },
   {
     id: 2,
-    icon: MonitorPlay,
-    title: 'Join LIVE Demo Class',
-    description: 'Attend the demo class as scheduled.',
+    icon: CheckSquare,
+    title: "Parents select the best tutor based on demo",
+    color: "bg-green-200",
   },
   {
     id: 3,
-    icon: CreditCard,
-    title: 'Pay and Start',
-    description: 'Use TutorEdge SecurePay to pay and start your Classes.',
+    icon: FileText,
+    title: "Tutor conducts monthly test series on our platform",
+    color: "bg-blue-200",
+  },
+  {
+    id: 4,
+    icon: BarChart,
+    title: "Student’s scorecard displayed on dashboard",
+    color: "bg-green-300",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    // 3. Changed max-w-5xl to max-w-6xl for consistency
-    <div className="mx-auto max-w-6xl p-6 py-16">
-      {/* 1. Removed 'text-center' to align the title to the left */}
-      <h2 className="mb-16 text-3xl font-bold text-gray-800">
-        How it <span className="text-primary">works!</span>
+    <div className="mx-auto max-w-6xl px-6 py-16">
+      <h2 className="mb-12 text-3xl font-bold text-gray-800">
+        One <span className="text-primary">Step-by-Step Learning Process</span>
       </h2>
 
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         {stepsData.map((step, index) => {
           const Icon = step.icon;
           return (
             <div
               key={step.id}
-              className="relative flex flex-col items-center text-center"
+              className={`relative flex w-full flex-col items-center justify-center rounded-lg ${step.color} p-6 shadow-md transition hover:shadow-lg md:w-1/4`}
             >
-              {/* 2. Shortened the line to create space around the numbers */}
-              {index < stepsData.length - 1 && (
-                <div className="absolute left-[62%] top-5 hidden h-0.5 w-[90%] bg-gray-200 md:block" />
-              )}
-
-              {/* Numbered Circle (no changes needed here) */}
-              <div className="relative z-10 flex size-10 items-center justify-center rounded-full bg-gray-100 font-bold text-gray-600">
-                {step.id}
-              </div>
-
-              <div className="my-6 flex size-32 items-center justify-center rounded-full bg-teal-100">
-                <Icon className="size-16 text-teal-500" />
-              </div>
-
-              <h3 className="mb-2 text-xl font-bold text-gray-900">
+              <Icon className="mb-3 size-10 text-gray-800" />
+              <p className="text-center text-gray-800 font-medium leading-snug">
                 {step.title}
-              </h3>
-              <p className="max-w-xs text-gray-600">{step.description}</p>
+              </p>
+
+              {index < stepsData.length - 1 && (
+                <div className="absolute right-[-30px] top-1/2 hidden h-1 w-10 -translate-y-1/2 transform bg-gray-400 md:block" />
+              )}
             </div>
           );
         })}
-      </div>
-
-      {/* 3. Used flexbox to properly center the button */}
-      <div className="mt-16 flex justify-center">
-        <Button>Get Started!</Button>
       </div>
     </div>
   );
