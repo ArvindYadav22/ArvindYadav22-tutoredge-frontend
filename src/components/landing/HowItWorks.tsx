@@ -1,59 +1,62 @@
 import React from "react";
-import { Users, CheckSquare, FileText, BarChart } from "lucide-react";
 
 const stepsData = [
   {
     id: 1,
-    icon: Users,
+    img: "/illustrations/demo.svg", 
     title: "1 to 3 Tutors give a demo session to your child",
-    color: "bg-yellow-100",
+    color: "bg-yellow-400",
   },
   {
     id: 2,
-    icon: CheckSquare,
+    img: "/illustrations/selection.svg",
     title: "Parents select the best tutor based on demo",
-    color: "bg-green-200",
+    color: "bg-pink-400",
   },
   {
     id: 3,
-    icon: FileText,
+    img: "/illustrations/test.svg",
     title: "Tutor conducts monthly test series on our platform",
-    color: "bg-blue-200",
+    color: "bg-blue-400",
   },
   {
     id: 4,
-    icon: BarChart,
+    img: "/illustrations/analytics.svg",
     title: "Student’s scorecard displayed on dashboard",
-    color: "bg-green-300",
+    color: "bg-green-400",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <h2 className="mb-12 text-3xl font-bold text-gray-800">
+    <div className="mx-auto max-w-7xl px-6 py-20">
+      <h2 className="mb-16 text-4xl font-extrabold text-gray-900">
         One <span className="text-primary">Step-by-Step Learning Process</span>
       </h2>
 
-      <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        {stepsData.map((step, index) => {
-          const Icon = step.icon;
-          return (
-            <div
-              key={step.id}
-              className={`relative flex w-full flex-col items-center justify-center rounded-lg ${step.color} p-6 shadow-md transition hover:shadow-lg md:w-1/4`}
-            >
-              <Icon className="mb-3 size-10 text-gray-800" />
-              <p className="text-center text-gray-800 font-medium leading-snug">
-                {step.title}
-              </p>
-
-              {index < stepsData.length - 1 && (
-                <div className="absolute right-[-30px] top-1/2 hidden h-1 w-10 -translate-y-1/2 transform bg-gray-400 md:block" />
-              )}
+      <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
+        {stepsData.map((step, index) => (
+          <div
+            key={step.id}
+            className={`relative flex w-full max-w-sm flex-col items-center justify-center rounded-3xl ${step.color} p-8 shadow-xl transition-transform hover:scale-105 hover:shadow-2xl md:w-1/4`}
+          >
+            <div className="mb-4 flex justify-center">
+              <img
+                src={step.img}
+                alt={step.title}
+                className="h-32 w-32 object-contain drop-shadow-md"
+              />
             </div>
-          );
-        })}
+
+            <p className="text-center text-lg font-semibold text-white leading-snug">
+              {step.title}
+            </p>
+
+            {index < stepsData.length - 1 && (
+              <div className="absolute right-[-45px] top-1/2 hidden h-1 w-10 -translate-y-1/2 transform bg-gray-300 md:block"></div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
